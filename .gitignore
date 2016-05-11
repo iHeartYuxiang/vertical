@@ -1,0 +1,12 @@
+/bin/
+.settings/
+target/
+
+*.project
+.DS_STORE
+*.classpath
+*.local
+*.log
+*.class
+*.xls
+*.png
