@@ -73,9 +73,10 @@ public class AndroidNavigation extends Page implements Navigation {
     	
     }
     
-   private void scrollDown()
-   {
-	   // to be implemented
+   public void scrollDown()
+   {   android_navIcon.click();
+       WaitUtility.sleep(1000);
+	  Page.scroll(android_home, android_artistRadio);
    }
     
     private void scrollDown_notYetImplemented()

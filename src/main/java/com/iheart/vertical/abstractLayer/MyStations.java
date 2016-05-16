@@ -52,8 +52,48 @@ public abstract class MyStations extends Page{
     	
     }
     
-    
+    //Delete the first
     public void deleteAstation()
+    {
+    	Actions builder = new Actions(driver);
+    	  
+
+    	double ratioX = 0.95921450;
+    	double ratioY = 0.93198992;
+    	
+        WebElement theBox = driver.findElement(By.cssSelector("li.tile:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(3) > div:nth-child(1)"));
+        
+    	
+    	int w = theBox.getSize().getWidth();
+    	int  u = w / 2;
+    	int x = theBox.getLocation().getX();
+    	int   y = theBox.getLocation().getY();
+    	int  centerX = x + u;
+    	int centerY = y + u;
+    	int  circleX = (int) ((x + w) * ratioX);
+    	int circleY = (int) ((y + w) * ratioY);
+    	
+    	int clickX = circleX - centerX;
+    	int clickY = circleY - centerY;
+        System.out.println("clickX/Y:" + clickX + "/" + clickY);
+    	
+    	builder.moveToElement(theBox).build().perform();
+    	WaitUtility.sleep(500);
+    	builder.moveByOffset(clickX, clickY).click().build().perform();
+    	WaitUtility.sleep(500);
+    	WebElement removeButton = driver.findElement(By.cssSelector("li.tile:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > nav:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)"));
+       	removeButton.click();
+    	
+    	WebElement confirm = driver.findElement(By.cssSelector("button.btn-primary:nth-child(2)"));
+        
+    	confirm.click();
+    
+    
+    }
+    
+    
+    //Delete the first one as of such a type
+    public void deleteAstationByType(String type)
     {
     	Actions builder = new Actions(driver);
     	  

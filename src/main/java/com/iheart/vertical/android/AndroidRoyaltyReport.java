@@ -138,11 +138,11 @@ public class AndroidRoyaltyReport {
          player.collapse();
          
          
-         /* comment it for now till I figure out a way to scroll the page all way down
+         
          Page.goBack();
          logEvent("Exit app");
          navigation.gotoPage("exit");
-         */
+        
     
        System.out.println("Podcasts part is done.");
 	        
@@ -340,4 +340,18 @@ public class AndroidRoyaltyReport {
    	return eventLog;
    }
 
+   
+
+   public void testScroll() throws Exception
+   {   
+      
+      loginPage.setLocation("10013");
+       loginPage.login();
+       
+      
+    
+       navigation.scrollDown();
+       
+   }
+   
 }

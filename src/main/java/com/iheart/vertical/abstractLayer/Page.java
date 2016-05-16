@@ -15,6 +15,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
+import io.appium.java_client.MobileDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.*;
 
@@ -505,5 +507,23 @@ public abstract class Page {
     }
     
     
+    public static void scroll( WebElement from, WebElement to)
+	{
+		// Using Touch Action Classes
+		TouchAction tAction=new TouchAction((MobileDriver)driver);
+		int startx = from.getLocation().getX();
+		int starty = from.getLocation().getY();
+		int endx = to.getLocation().getX();
+		int endy = to.getLocation().getY();
+		System.out.println(startx + " ::::::: " + starty + " ::::::: " + endx +  " ::::::: " +	endy);
+
+		//First tap on the screen and swipe it right using moveTo function
+		tAction.press(startx+20,starty+20).moveTo(endx+20,endy+20).release().perform(); 
+		WaitUtility.sleep(1000);
+		
+		//Second tap on the screen and swipe it left using moveTo function
+		tAction.press(endx+20,endy+20).moveTo(startx+20,starty+20).release().perform();
+		WaitUtility.sleep(1000);
+	}
     
 }

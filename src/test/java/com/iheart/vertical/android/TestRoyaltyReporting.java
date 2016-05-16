@@ -98,6 +98,15 @@ public class TestRoyaltyReporting {
     }
 	
 	
+	
+	@Test
+    public void testScrollDown() throws Exception
+    {   
+        System.out.println("test method:" +  name.getMethodName() );
+        
+        royaltyReport.testScroll();
+    }
+	
 	@Test
     public void testRoyalty_myStations() throws Exception
     {   
@@ -231,7 +240,7 @@ public class TestRoyaltyReporting {
 	    public TestRule watcher = new TestWatcher() {
 	        @Override
 	        public void finished(Description description) {
-	           driver.quit();
+	       //    driver.quit();
 	        }
 
 	        @Override
@@ -255,7 +264,7 @@ public class TestRoyaltyReporting {
 	                System.out.println(ex.getMessage()); 
 	            }
 
-	           driver.quit();
+	      //     driver.quit();
 	        }
 	    };
 

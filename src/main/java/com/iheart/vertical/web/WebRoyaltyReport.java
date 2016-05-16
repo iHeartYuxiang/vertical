@@ -145,7 +145,7 @@ public class WebRoyaltyReport {
             logEvent("Swtich to Podcast");
             Page.search("Ask Dave");
              
-            // comment this part off since skip and thumbUP/down behavior has changed for podcasts
+            // comment this part off due to podcast V2 since skip and thumbUP/down behavior has changed for podcasts
             /* 
              
             logEvent("Skip some episodes(> 15 secs)");
@@ -201,11 +201,18 @@ public class WebRoyaltyReport {
     {   
         
             loginPage.login();
-            logEvent("Delete Podcast from MY STATIONS page");
             
             
+            logEvent("Play Live station from MY STATIONS page");
             navigation.gotoPage("myStations");
-            WaitUtility.sleep(2000);
+            myStations.playLiveRadio();
+            navigation.gotoPage("myStations");
+            myStations.deleteAstation();
+            
+            logEvent("Delete Podcast from MY STATIONS page");
+            navigation.gotoPage("myStations");
+            myStations.playPodcast();
+            navigation.gotoPage("myStations");
             myStations.deleteAstation();
             
             logEvent("Play a custom station from MY STATIONS");
@@ -214,7 +221,6 @@ public class WebRoyaltyReport {
             
             logEvent("Delete station from MY STATIONS");
             navigation.gotoPage("myStations");
-            WaitUtility.sleep(2000);
             myStations.deleteAstation();
             
             logEvent("Play a custom station from 'For You' tab");
