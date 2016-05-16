@@ -85,9 +85,9 @@ public class Utils {
 	    else if (browser.equalsIgnoreCase("chrome"))
 	    {   //Set actual path to the driver file
 	
-	      // System.setProperty("webdriver.chrome.driver", "C:\\Users\\mmatos\\git\\lib\\chromedriver.exe");
+	       System.setProperty("webdriver.chrome.driver", "C:\\Users\\mmatos\\git\\lib\\chromedriver.exe");
 	      //System.setProperty("webdriver.chrome.driver", "C:\\Users\\1111128\\git\\drivers\\chromedriver.exe");
-	    	System.setProperty("webdriver.chrome.driver", "/Users/1111128/git/drivers/chromedriver");
+	    //	System.setProperty("webdriver.chrome.driver", "/Users/1111128/git/drivers/chromedriver");
 	  	  
 	  
 		      ChromeOptions options = new ChromeOptions();
