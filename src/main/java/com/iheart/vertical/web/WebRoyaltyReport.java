@@ -208,12 +208,13 @@ public class WebRoyaltyReport {
             myStations.playLiveRadio();
             navigation.gotoPage("myStations");
             myStations.deleteAstation();
+           // myStations.deleteFirstStation("live");
             
             logEvent("Delete Podcast from MY STATIONS page");
             navigation.gotoPage("myStations");
             myStations.playPodcast();
             navigation.gotoPage("myStations");
-            myStations.deleteAstation();
+            myStations.deleteFirstStation("talk-show");
             
             logEvent("Play a custom station from MY STATIONS");
             navigation.gotoPage("myStations");
@@ -221,7 +222,7 @@ public class WebRoyaltyReport {
             
             logEvent("Delete station from MY STATIONS");
             navigation.gotoPage("myStations");
-            myStations.deleteAstation();
+            myStations.deleteFirstStation("artist");
             
             logEvent("Play a custom station from 'For You' tab");
             navigation.gotoPage("forYou");

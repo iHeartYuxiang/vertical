@@ -94,12 +94,32 @@ public class WebMyStations extends MyStations{
 		   
 		    
 		}
+	    
+	   
 		    
+	    public void deleteFirstStation(String type)
+	    {
+	    	List<WebElement> radios = stationTiles.findElements(By.className(type));
+		       System.out.println(type + " radios count:" + radios.size());
+		      if (radios.size() <1 )
+		      {
+		    	  System.out.println("No such a radio in this page. Do nothing.");
+		    	  return;
+		      }
+		      
+		      
+		       for(WebElement radio: radios)
+		       {   
+		    	   deleteAstation(radio.findElement(By.className("mask")));
+		    	   break;
+		       }
+	    }    
+	    
 	    
 	public void locateElements()
 	{
 		stationToDelete = this.web_stationToDelete;
-	   
+		
 	}
 
 	
