@@ -94,7 +94,7 @@ public class TestRoyaltyReporting {
          } 
      }    
 	
-	 @Test
+	 @Ignore("for now")
      public void testRoyalty_live_artist_Radio() throws Exception
      {   
          System.out.println("test method:" +  name.getMethodName() );
@@ -107,7 +107,7 @@ public class TestRoyaltyReporting {
          } 
      }   
 	  
-	 @Test
+    @Ignore("for now")
      public void testRoyalty_podcasts() throws Exception
      {   
          System.out.println("test method:" +  name.getMethodName() );
