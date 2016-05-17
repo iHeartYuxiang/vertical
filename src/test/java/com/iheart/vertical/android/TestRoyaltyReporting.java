@@ -53,17 +53,15 @@ public class TestRoyaltyReporting {
 	 private static final String BUNDLE_ID = "com.clearchannel.iheartradio";
 	// private static final String APP_NAME = "/Users/1111128/Desktop/androidBuild/iHeartRadio-google-mobile-ampprod-debug.apk";
 	//The following is the one that I used earlier
-  //   private static final String APP_NAME = "/Users/1111128/Desktop/androidBuild/iHeartRadio-google-mobile-ampprod-dev.apk";
-	 private static final String APP_NAME = "/Users/1111128/Desktop/androidBuild/iHeartRadio-google-mobile-ampprod-release.apk";
+        private static final String APP_NAME = "/Users/jenkins/Desktop/androidBuild/6.1.1/iHeartRadio-google-mobile-ampprod-release.apk";
+//	 private static final String APP_NAME = "/Users/1111128/Desktop/androidBuild/iHeartRadio-google-mobile-ampprod-release.apk";
 			
 	 
 	 private AndroidDriver driver;
 	 private AndroidRoyaltyReport royaltyReport;
 	 static Map<String, String> eventLog ;
 	
-	//final String URL = "http://www.iheart.com";
-	final String URL = "http://beta.iheart.com";
-	
+
 	@Rule public TestName name = new TestName();
 	
 	@BeforeClass
