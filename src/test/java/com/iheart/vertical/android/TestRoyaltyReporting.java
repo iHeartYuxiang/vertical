@@ -95,16 +95,7 @@ public class TestRoyaltyReporting {
        }
     }
 	
-	
-	
-	@Test
-    public void testScrollDown() throws Exception
-    {   
-        System.out.println("test method:" +  name.getMethodName() );
-        
-        royaltyReport.testScroll();
-    }
-	
+
 	@Test
     public void testRoyalty_myStations() throws Exception
     {   
