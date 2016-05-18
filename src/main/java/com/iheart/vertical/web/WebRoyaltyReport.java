@@ -61,8 +61,8 @@ public class WebRoyaltyReport {
     {   
         
        
-            loginPage.login();
-            logEvent("login");
+          //  loginPage.login();
+           // logEvent("login");
             
             
             logEvent("play a live station from For you");
@@ -132,7 +132,7 @@ public class WebRoyaltyReport {
     public void testRoyalty_podcasts() throws Exception
     {   
         
-            loginPage.login();
+          //  loginPage.login();
             logEvent("Switch to live/talk - Elvis Duran Replay Channel");
 	            
             Page.search("Elvis Duran Replay Channel");
@@ -201,7 +201,7 @@ public class WebRoyaltyReport {
     {   
         
             loginPage.login();
-            
+            logEvent("login");
             
             logEvent("Play Live station from MY STATIONS page");
             navigation.gotoPage("myStations");
