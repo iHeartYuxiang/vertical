@@ -80,9 +80,36 @@ public class TestRoyaltyReporting {
         
     }
     
+    	 @Test
+     public void testRoyaltyReporting() throws Exception
+     {   
+         System.out.println("test method:" +  name.getMethodName() );
+         try{
+           royaltyReport.testRoyalty_myStations();
+         }catch(Exception e)
+         {
+             handleException(e);
+         } 
+         
+          try{
+           royaltyReport.testRoyalty_live_artist_Radio();
+         }catch(Exception e)
+         {
+             handleException(e);
+         } 
+         
+         
+          try{
+           royaltyReport.testRoyalty_podcasts();
+        }catch(Exception e)
+        {
+            handleException(e);
+        } 
+         
+     }    
 	
 
-	 @Test
+	 @Ignore("skip this")
      public void testRoyaltyReporting_myStations() throws Exception
      {   
          System.out.println("test method:" +  name.getMethodName() );
