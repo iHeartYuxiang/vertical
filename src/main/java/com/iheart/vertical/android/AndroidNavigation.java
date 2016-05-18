@@ -68,7 +68,7 @@ public class AndroidNavigation extends Page implements Navigation {
     
     private void exitApp( )
     {   android_navIcon.click();
-    	scrollDown();
+    	//scrollDown();
     	android_exitApp.click();
     	
     }
