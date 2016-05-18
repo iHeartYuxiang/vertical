@@ -201,7 +201,12 @@ public class AndroidPlayer extends Player implements MobilePlayer {
 	}
 	
 	public void fullScreen()
-	{   //if run into audio commercial, then there will be no aritst info
+	{   
+		//if it is full screen already, simply return
+		if(isFullScreen()) 
+		   return;
+		
+		//if run into audio commercial, then there will be no aritst info
 		try{
 			androidMini_trackName.click();
 	    	WaitUtility.sleep(1000);
@@ -212,6 +217,17 @@ public class AndroidPlayer extends Player implements MobilePlayer {
 			WaitUtility.sleep(35000);
 			androidMini_trackName.click();
 	    	WaitUtility.sleep(1000);
+		}
+	}
+	
+	private boolean isFullScreen()
+	{
+		try{
+			  player_toolbar.findElement(findCollapseButtonBy);
+			  return true;
+		}catch(Exception e)
+		{
+			return false;
 		}
 	}
 	
