@@ -240,7 +240,7 @@ public class TestRoyaltyReporting {
 	    public TestRule watcher = new TestWatcher() {
 	        @Override
 	        public void finished(Description description) {
-	       //    driver.quit();
+	           driver.quit();
 	        }
 
 	        @Override
@@ -252,9 +252,12 @@ public class TestRoyaltyReporting {
 
 	               // String filePathRoot = "C:\\_Jenkins\\workspace\\" + jenkinsJobName + "\\target\\surefire-reports\\";
 	        		String currentPath =  System.getProperty("user.dir");
-	        		String path = currentPath + "\\target\\surefire-reports\\";
+	        		//String path = currentPath + "\\target\\surefire-reports\\";
+	        		String path = currentPath + "/target/surefire-reports/";
 	        		
-	                String fullFilePath = path + description.getClassName() + "\\" + description.getMethodName() + ".jpg";
+	               // String fullFilePath = path + description.getClassName() + "\\" + description.getMethodName() + ".jpg";
+	                String fullFilePath = path + description.getClassName() + "/" + description.getMethodName() + ".jpg";
+
 
 	                FileUtils.copyFile(screenshot, new File(fullFilePath));
 	                
@@ -264,7 +267,7 @@ public class TestRoyaltyReporting {
 	                System.out.println(ex.getMessage()); 
 	            }
 
-	      //     driver.quit();
+	            driver.quit();
 	        }
 	    };
 
