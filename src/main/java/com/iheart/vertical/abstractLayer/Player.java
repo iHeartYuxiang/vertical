@@ -422,7 +422,9 @@ public abstract class Player extends Page{
 	}
 	
 	public void doScan()
-	{  /*
+	{  
+	    fullScreen();
+	    /*
 	      Need to handle the case when audio commercial is on.
 	
 	    */
