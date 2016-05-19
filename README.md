@@ -1,4 +1,3 @@
-# vertical
 
 #RoyaltyReporting Using Vertical Architecture
 ##Setup Eclipse 
